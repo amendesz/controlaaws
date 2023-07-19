@@ -24,3 +24,15 @@ Antes de usar o script, certifique-se de que os seguintes requisitos foram atend
 ```bash
 git clone https://github.com/seu-usuario/aws-instance-control.git
 cd aws-instance-control
+```
+
+2. Dê permissão de execução ao script:
+
+```bash
+chmod +x aws_instance_control.sh
+```
+3. Execute o script:
+
+```bash
+./aws_instance_control.sh
+```
