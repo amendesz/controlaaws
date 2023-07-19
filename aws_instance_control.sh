@@ -33,7 +33,8 @@ lista_sp=$(listar_instancias "sa-east-1")
 # Mostra a lista completa com numeração e região
 contador=1
 while read -r instance_id state availability_zone name; do
-    regiao=$(echo "$availability_zone" | sed 's/[a-c]$//') # Obtém a região removendo a última letra da zona de disponibilidade
+    regiao=$(echo "$availability_zone" | sed 's/[a-c]$//') 
+# Obtém a região removendo a última letra da zona de disponibilidade
     echo "$contador. $instance_id | $state | $name (Região: $regiao)"
     ((contador++))
 done <<< "$lista_sp"
@@ -44,7 +45,8 @@ lista_ohio=$(listar_instancias "us-east-2")
 
 # Mostra a lista completa com numeração e região
 while read -r instance_id state availability_zone name; do
-    regiao=$(echo "$availability_zone" | sed 's/[a-c]$//') # Obtém a região removendo a última letra da zona de disponibilidade
+    regiao=$(echo "$availability_zone" | sed 's/[a-c]$//') 
+# Obtém a região removendo a última letra da zona de disponibilidade
     echo "$contador. $instance_id | $state | $name (Região: $regiao)"
     ((contador++))
 done <<< "$lista_ohio"
